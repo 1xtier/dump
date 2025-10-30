@@ -1,11 +1,17 @@
-[
-  {
-    "name" : "test",
-    "url" : "test"
-  },
-  {
-  "name" : "test2",
-  "url" : "test2"
-  }
 
+[
+{
+ "test1": {
+    "name" : "test1",
+    "desc" : "tyt opisanie",
+    "link" : "url raw file github"
+}
+},
+{
+ "test2": {
+    "name" : "test2",
+    "desc" : "tyt opisanie",
+    "link" : "url raw file github"
+}
+}
 ]
