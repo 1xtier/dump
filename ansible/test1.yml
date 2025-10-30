@@ -1,0 +1,15 @@
+- name: 'Check disk' 
+  hosts: "{{ w_host | default('test') }}"
+  tasks:  
+    - name: checking the free disk space
+      ansible.builtin.shell: df -h | grep -v "tmpfs"
+      register: check_disk
+    - name: Display checking the free disk space
+      ansible.builtin.debug:
+        var: check_disk.stdout_lines
+    - name: Checking the free space in the home directory
+      ansible.builtin.shell:  du -ahx /home | sort -rh | head -5
+      register: check_home
+    - name: Display Checking the free space in the home directory
+      ansible.builtin.debug:
+        var: check_home.stdout_lines
